@@ -40,6 +40,8 @@ py app.py --model-path MODEL_PATH_HERE
 
 - **Longer Prompt Support**: AingUI implements `compel` library to support prompts longer than 77 tokens, which is not supported by Diffusers by default.
 
+- **Emphasis and De-emphasis Prompt**: You can write your prompt like `(blue theme)1.2` to emphasis your prompt to 1.2 weights or `(monochrome)0.6` to de-emphasis your prompt to 0.6 weights.
+
 - **Metadata**: AingUI saves and uses the same metadata format used in AUTO111/Forge. So you can share your generated images to [Civitai](https://civitai.com) or other platforms with all your parameters readable.
 
 - **Resolution**: No need to worry that the resolution you set will produce bad images. Our resolution radio button lists all the resolutions supported by SDXL.
