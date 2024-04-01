@@ -25,7 +25,7 @@ model_path = args.model_path
 
 if os.path.isdir(model_path):
     model_name = os.path.basename(model_path)  # Extract the directory name
-    print(f"Loading {model_name} model...")
+    print(f"Loading {model_name} Diffusers model...")
 
     pipe = StableDiffusionXLPipeline.from_pretrained(
         model_path,
@@ -37,7 +37,7 @@ if os.path.isdir(model_path):
     pipe.scheduler = EulerAncestralDiscreteScheduler.from_config(pipe.scheduler.config)
 elif model_path.endswith('.safetensors'):
     model_name = os.path.basename(model_path).split('.safetensors')[0]  # Extract the filename without extension
-    print(f"Loading {model_name} model...")
+    print(f"Loading {model_name} Safetensors model...")
 
     pipe = StableDiffusionXLPipeline.from_single_file(
         model_path,
