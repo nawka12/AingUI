@@ -1,6 +1,8 @@
 # AingUI
 A lightweight and simple Stable Diffusion WebUI for SDXL optimized for Animagine XL 3.x and its derivatives
 
+![image](https://github.com/nawka12/AingUI/assets/54880732/51edcb52-4b69-48e5-aadb-ccb30ecf0bb8)
+
 AingUI is a simple and lightweight Stable Diffusion UI built with Gradio on top of Diffusers. Designed to work with SDXL and optimized for Animagine XL 3.x and its derivatives.
 
 ## Installation
