@@ -8,6 +8,9 @@ AingUI is a simple and lightweight Stable Diffusion UI built with Gradio on top 
 ## Installation
 (Tested with Python 3.11.5)
 ### Windows
+You can use the provided `install.bat` to install AingUI, and edit `run.bat` file to add the model path and arguments, then use it to run AingUI.
+
+Or if you prefer to do it manually, you can follow the script below.
 ```pwsh
 # Use Powershell to run this.
 git clone https://github.com/nawka12/AingUI # Clone this repository
