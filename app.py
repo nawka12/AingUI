@@ -149,7 +149,7 @@ with block:
         prompt_input = gr.TextArea(label="Prompt", placeholder="Enter your prompt here")
         negative_prompt_input = gr.TextArea(label="Negative Prompt", placeholder="Enter your negative prompt here")
     num_inference_steps_input = gr.Slider(minimum=1, maximum=50, value=28, step=1, label="Number of Inference Steps")
-    guidance_scale_input = gr.Slider(minimum=1, maximum=12, value=7, step=1, label="Guidance Scale")
+    guidance_scale_input = gr.Slider(minimum=1, maximum=12, value=7, step=0.5, label="Guidance Scale")
     resolution_input = gr.Radio(["1024 x 1024", "1152 x 896", "896 x 1152", "1216 x 832", "832 x 1216", "1344 x 768", "768 x 1344", "1536 x 640", "640 x 1536"], value="896 x 1152", label="Resolution")
     custom_seed_input = gr.Textbox(label="Seed", placeholder="Enter custom seed (if not using randomizer)")
     use_seed_randomizer_input = gr.Checkbox(label="Use Seed Randomizer", value=True)
