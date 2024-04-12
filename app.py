@@ -151,12 +151,12 @@ with block:
     num_inference_steps_input = gr.Slider(minimum=1, maximum=50, value=28, step=1, label="Number of Inference Steps")
     guidance_scale_input = gr.Slider(minimum=1, maximum=12, value=7, step=0.5, label="Guidance Scale")
     resolution_input = gr.Radio(["1024 x 1024", "1152 x 896", "896 x 1152", "1216 x 832", "832 x 1216", "1344 x 768", "768 x 1344", "1536 x 640", "640 x 1536"], value="896 x 1152", label="Resolution")
-    custom_seed_input = gr.Textbox(label="Seed", placeholder="Enter custom seed (if not using randomizer)")
+    custom_seed_input = gr.Textbox(label="Seed", placeholder="Enter custom seed (if not using randomizer)", max_lines=1)
     use_seed_randomizer_input = gr.Checkbox(label="Use Seed Randomizer", value=True)
     enable_standard_quality_input = gr.Checkbox(label="Enable Standard Quality Prompt for Animagine XL and Its Derivatives", value=True)
     generate_button = gr.Button("Generate Image")
     output_image = gr.Image(label="Generated Image")
-    prompt_label = gr.Label(label="Final Prompt")
+    prompt_label = gr.TextArea(label="Final Prompt", interactive=False)
     generate_button.click(fn=generate_image, inputs=[prompt_input, negative_prompt_input, use_seed_randomizer_input, custom_seed_input, enable_standard_quality_input, num_inference_steps_input, guidance_scale_input, resolution_input], outputs=[output_image, custom_seed_input, prompt_label])
     custom_seed_input.disabled = True
 
